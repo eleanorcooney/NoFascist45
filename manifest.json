@@ -1,0 +1,23 @@
+{
+  "name": "DeTrumpifier",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Replace the name of the 45th President of the United States with suitable mocking titles on the page of your choice.",
+  "icons": { "16": "icon_16.png",
+             "48": "icon_48.png",
+             "128": "icon_128.png"},
+  "content_scripts": [ {
+        "exclude_globs":    [  ],
+        "include_globs":    [ "*" ],
+        "js":               [ "jquery-3.2.1.min.js",
+                              "contentscript.js" ],
+        "matches":          [  "http://*/*",
+                               "https://*/*"
+                            ],
+        "exclude_matches":  [
+                            ],
+        "run_at": "document_end"
+    } ],
+  "permissions": [
+  ]
+}
